@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Građevinska Firma - Profesionalni Radovi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://source.unsplash.com/random/1600x900/?construction') no-repeat center center/cover;
+            height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        header h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        header p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+        .btn {
+            background: #ff6600;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #e65c00;
+        }
+        nav {
+            background: #8B4513; /* Smeđa boja umesto tamno plave */
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        nav ul li a:hover {
+            color: #ff6600;
+        }
+        section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+        #usluge {
+            background: #f4f4f4;
+        }
+        .usluge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+        .usluga {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .usluga i {
+            font-size: 3rem;
+            color: #ff6600;
+            margin-bottom: 20px;
+        }
+        #onama {
+            background: white;
+        }
+        #galerija {
+            background: #f4f4f4;
+        }
+        .galerija-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+        .galerija-grid img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .galerija-grid img:hover {
+            transform: scale(1.05);
+        }
+        #kontakt {
+            background: #8B4513; /* Smeđa i za kontakt sekciju */
+            color: white;
+        }
+        form {
+            max-width: 600px;
+            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        input, textarea {
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        button {
+            background: #ff6600;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+        button:hover {
+            background: #e65c00;
+        }
+        footer {
+            background: #5D2F0D; /* Tamnija smeđa za footer */
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 1.8rem;
+            margin: 0 15px;
+            transition: 0.3s;
+        }
+        .social-icons a:hover {
+            color: #ff6600;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#pocetna">Početna</a></li>
+            <li><a href="#usluge">Usluge</a></li>
+            <li><a href="#onama">O nama</a></li>
+            <li><a href="#galerija">Galerija</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <header id="pocetna">
+        <h1>Građevinska Firma "Majstor"</h1>
+        <p>Profesionalni građevinski radovi - kvalitet, brzina i povoljne cene</p>
+        <a href="#kontakt" class="btn">Kontaktirajte nas</a>
+    </header>
+
+    <section id="usluge">
+        <h2>Naše usluge</h2>
+        <div class="usluge-grid">
+            <div class="usluga">
+                <i class="fas fa-home"></i>
+                <h3>Izidavanje kuća</h3>
+                <p>Kompletna izgradnja porodičnih kuća po sistemu "ključ u ruke".</p>
+            </div>
+            <div class="usluga">
+                <i class="fas fa-building"></i>
+                <h3>Adaptacija i rekonstrukcija</h3>
+                <p>Renoviranje stanova, lokala i poslovnih prostora.</p>
+            </div>
+            <div class="usluga">
+                <i class="fas fa-tools"></i>
+                <h3>Moleraj i keramičarski radovi</h3>
+                <p>Kvalitetno krečenje, gletovanje i postavljanje pločica.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="onama">
+        <h2>O nama</h2>
+        <p>Sa preko 20 godina iskustva u građevinarstvu, naša firma pruža vrhunske usluge širom Balkana. Tim iskusnih majstora garantuje kvalitet i poštovanje rokova.</p>
+    </section>
+
+    <section id="galerija">
+        <h2>Galerija radova</h2>
+        <div class="galerija-grid">
+            <img src="https://source.unsplash.com/random/600x400/?house,construction" alt="Rad 1">
+            <img src="https://source.unsplash.com/random/600x400/?renovation" alt="Rad 2">
+            <img src="https://source.unsplash.com/random/600x400/?tiles" alt="Rad 3">
+            <img src="https://source.unsplash.com/random/600x400/?building" alt="Rad 4">
+            <img src="https://source.unsplash.com/random/600x400/?interior" alt="Rad 5">
+            <img src="https://source.unsplash.com/random/600x400/?roof" alt="Rad 6">
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <h2>Kontaktirajte nas</h2>
+        <form>
+            <input type="text" placeholder="Vaše ime" required>
+            <input type="email" placeholder="Vaš email" required>
+            <input type="tel" placeholder="Vaš telefon" required>
+            <textarea rows="6" placeholder="Vaša poruka" required></textarea>
+            <button type="submit">Pošalji poruku</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Građevinska Firma Majstor. Sva prava zadržana.</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/tvojprofil" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@tvojprofil" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/@tvojkanal" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll za linkove
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

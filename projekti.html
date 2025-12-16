@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekti | Građevina Pro</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --accent-color: #9333ea; /* Ljubičasta */
+        }
+        .projects-hero h1, .gallery-grid img:hover, .nav a:hover, .nav a.active {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+        .gallery-grid img {
+            transition: all 0.3s;
+            opacity: 0.9;
+        }
+        .gallery-grid img:hover {
+            opacity: 1;
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(147, 51, 234, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header + aktivna "Projekti" -->
+
+    <section class="projects-hero">
+        <div class="container">
+            <h1>Naši projekti</h1>
+            <p>Pogledajte realizovane objekte</p>
+        </div>
+    </section>
+
+    <!-- Galerija - ostalo isto -->
+
+</body>
+</html>
